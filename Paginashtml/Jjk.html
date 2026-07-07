@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeLat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="/index.html">Anime Lat</a>
+
+            <form id="formBusqueda" class="d-flex mx-auto" role="search">
+                <input
+                    id="busqueda"
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Buscar..."
+                >
+                <button class="btn btn-outline-primary" type="submit">Buscar</button>
+            </form>
+
+            <!-- Botón hamburguesa (para pantallas pequeñas o cuando haga pequeña la pagina)-->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls="menu"
+                aria-expanded="false"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-grow-0" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Perfil</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <main class="container-fluid my-5">
+
+        <h1 class="mb-4">Jujutsu Kaisen - Episodio 1</h1>
+
+        <div class="row">
+
+            <!-- ===== Reproductor y selector de episodios ===== -->
+            <section class="col-lg-9">
+
+                <!-- Reproductor 16:9 -->
+                <div class="ratio ratio-16x9 mb-3">
+                    <iframe
+                        src="https://www.youtube.com/embed/t-9MGqUNFWA"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Botones de episodios, el activo usa btn-warning, los demás btn-outline-light -->
+                <div class="d-flex flex-wrap gap-2">
+                    <button class="btn btn-warning">Episodio 1</button>
+                    <button class="btn btn-outline-light">Episodio 2</button>
+                    <button class="btn btn-outline-light">Episodio 3</button>
+                    <button class="btn btn-outline-light">Episodio 4</button>
+                </div>
+
+            </section>
+            <!-- ===== / Reproductor ===== -->
+
+
+            <!-- ===== Sidebar: series recomendadas ===== -->
+            <aside class="col-lg-3">
+
+                <h3 class="mb-3">Series recomendadas</h3>
+
+                <div class="row g-3">
+
+                    <div class="col-6">
+                        <div class="card">
+                            <a href="Konosuba.html">
+                                <img src="/img/KonoSuba.jpg" class="card-img-top" alt="Konosuba">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card">
+                            <a href="My_Dress-up.html">
+                                <img src="/img/My Dress-Up Darling.jpg" class="card-img-top" alt="My Dress-Up Darling">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card">
+                            <a href="Nanbaka.html">
+                                <img src="/img/Nanbaka.jpg" class="card-img-top" alt="Nanbaka">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card">
+                            <a href="#">
+                                <img src="/img/Bakemonogatari.jpg" class="card-img-top" alt="Bakemonogatari">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </aside>
+            <!-- ===== / Sidebar ===== -->
+
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!-- DATOS: 
+Nombre: Ortega Plaza Diego
+Cuatrimestre:6to
+Carrera :Ing. Desarrollo de Software
+Matricula: 2403230009
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeLat</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- DIV: LOGIN-->
+    <div id="loginContainer" style="display: block;">
+        <div class="login-wrapper d-flex align-items-center justify-content-center">
+            <div class="card login-card p-4">
+                <h2 class="text-center mb-1">Anime Lat</h2>
+                <p class="text-center text-secondary mb-4">Inicia sesión para continuar</p>
+
+                <form id="formLogin" novalidate>
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label">Usuario / Correo electrónico</label>
+                        <input type="text" class="form-control" id="usuario" placeholder="admin">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="contrasenia" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contrasenia" placeholder="••••••••">
+                    </div>
+
+                    <!-- Mensaje de error -->
+                    <div id="loginError" class="alert alert-danger d-none" role="alert"></div>
+
+                    <button type="submit" class="btn btn-primary w-100 mt-2">Ingresar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para alertas de validacion -->
+    <div class="modal fade" id="modalAlerta" tabindex="-1" aria-labelledby="modalAlertaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-warning-subtle">
+                    <h5 class="modal-title text-warning-emphasis text-danger" id="modalAlertaLabel" >
+                        Campos incompletos
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-warning mb-0" id="modalAlertaBody" role="alert">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="appContainer" style="display: none;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">Anime Lat</a>
+
+            <form id="formBusqueda" class="d-flex mx-auto" role="search">
+                <input
+                    id="busqueda"
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Buscar..."
+                >
+                <button class="btn btn-outline-primary" type="submit">Buscar</button>
+            </form>
+
+            <!-- Boton hamburguesa -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls="menu"
+                aria-expanded="false"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links de navegacion -->
+            <div class="collapse navbar-collapse flex-grow-0" id="menu">
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Perfil</a></li>
+                    <li class="nav-item">
+                        <button id="btnLogout" class="btn btn-outline-light btn-sm ms-lg-3">Cerrar Sesión</button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <section class="hero bg-primary text-white text-center p-5">
+        <div class="container">
+            <h1>Página para los aficionados al anime.</h1>
+            <p>Catálogo completo.</p>
+            <button class="btn btn-light">Ver Más</button>
+        </div>
+    </section>
+
+
+    <main class="container my-5">
+        <div class="row">
+            <section class="col-12">
+
+                <h2 class="mb-4">Animes destacados</h2>
+
+                <!-- Grid de las tarjetas: se genera dinámicamente vía fetch() en script.js -->
+                <div class="row g-4" id="contenedorAnimes">
+                    <!-- Aquí se inyectan las tarjetas con innerHTML -->
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+
+    <footer class="bg-dark text-white text-center p-4">
+        <p class="mb-0">© 2026 Anime Lat</p>
+    </footer>
+
+    </div>
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
